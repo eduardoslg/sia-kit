@@ -1,9 +1,9 @@
+import { Flex } from "@atmoutsourcing/siakit";
+
 export function Customers(){
   return (
-    <>
-      <div>
-        <p>Página de Favoritos.</p>
-      </div>
-    </>
+    <Flex margin>
+      <p>daspdsadsa</p>
+    </Flex>
   )
 }

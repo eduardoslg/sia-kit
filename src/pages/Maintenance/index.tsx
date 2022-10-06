@@ -1,11 +1,15 @@
-import { Flex } from "@atmoutsourcing/siakit";
+import { Flex, Select } from "@atmoutsourcing/siakit";
 
 export function Maintenance(){
+
+
+  const option = [{label: "teste", value: 1}]
+
   return (
-    <>
-      <Flex flex>
-        <p>Página de Filmes.</p>
-      </Flex>
-    </>
+    <Flex margin>
+      <p>
+        teste
+      </p>
+    </Flex>
   )
 }

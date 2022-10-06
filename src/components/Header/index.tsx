@@ -12,7 +12,7 @@ import {
   Flex,
 } from '@atmoutsourcing/siakit';
 
-import { BsBuilding, BsHouseDoor } from 'react-icons/bs';
+import { BsBuilding, BsFillPersonFill, BsHouseDoor, BsPerson, BsPersonCircle } from 'react-icons/bs';
 
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
@@ -34,29 +34,49 @@ export function Header(){
       <Sidebar>
         <Flex maxWidth={180}>
           <Menu>
-            <MenuHeader onClick={ toggleModal } children="SiaKit" />
-            <MenuItem icon={<BsHouseDoor/>} value="1" onClick={ toggleModal }>Manutenção</MenuItem>
-            <MenuItem icon={<BsBuilding/>} value="2" onClick={ toggleModal }>Clientes</MenuItem>
+            <MenuHeader onClick={ toggleModal } children="SiaKit"/>
+            <MenuItem icon={<BsHouseDoor/>} value="1" onClick={ toggleModal }>
+              Manutenção
+            </MenuItem>
+            <MenuItem icon={<BsBuilding/>} value="2" onClick={ toggleModal }>
+              Clientes
+            </MenuItem>
+            <MenuItem icon={<BsPerson/>} value="3" onClick={ toggleModal }>
+              Perfil
+            </MenuItem>
           </Menu>
         </Flex>
 
-          <SubMenu value="1">
-            <SubMenuTitle>Manutenção</SubMenuTitle>
-            <SubMenuSeparator />
-            <Link to="/maintenance" style={{ textDecoration: "none"}}>
-              <SubMenuItem children='Dashboard' onClick={ toggleModal }/>
-            </Link>
-          </SubMenu>
+        <SubMenu value="1">
+          <SubMenuTitle>
+            Manutenção
+          </SubMenuTitle>
+          <SubMenuSeparator />
+          <Link to="/maintenance" style={{ textDecoration: "none"}}>
+            <SubMenuItem children='Dashboard' onClick={ toggleModal }/>
+          </Link>
+        </SubMenu>
 
-          <SubMenu value="2">
-            <SubMenuTitle>Empresas</SubMenuTitle>
-            <SubMenuSeparator />
-            <Link to="/customers" style={{ textDecoration: "none"}}>
-              <SubMenuItem children="Cadastro de empresas" onClick={ toggleModal }/>
-            </Link>
-          </SubMenu>
+        <SubMenu value="2">
+          <SubMenuTitle>
+            Empresas
+          </SubMenuTitle>
+          <SubMenuSeparator />
+          <Link to="/customers" style={{ textDecoration: "none"}}>
+            <SubMenuItem children="Cadastro de empresas" onClick={ toggleModal }/>
+          </Link>
+        </SubMenu>
+
+        <SubMenu value="3">
+          <SubMenuTitle>
+            Configurações
+          </SubMenuTitle>
+          <SubMenuSeparator />
+          <Link to="/profile" style={{ textDecoration: "none"}}>
+            <SubMenuItem children="Configurações" onClick={ toggleModal }/>
+          </Link>
+        </SubMenu>
       </Sidebar>
-      
     </Flex>
    )
 }
