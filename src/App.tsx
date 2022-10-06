@@ -7,7 +7,7 @@ import Global from './styles/global';
 function App() {
 
   return (
-    <Grid columns={"180px 1420px"}>
+    <Grid columns={"12.5vw 87.5vw"}>
       <BrowserRouter>
         <Global />
         <Header />
@@ -18,3 +18,4 @@ function App() {
 }
 
 export default App
+

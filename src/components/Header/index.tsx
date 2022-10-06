@@ -19,29 +19,19 @@ import { Link } from 'react-router-dom';
 
 export function Header(){
 
-  const [showMenu, setShowMenu] = useState(false)
-
-  const anonima = () => {
-    console.log('teste')
-  }
-
-  const toggleModal = () => {
-    setShowMenu(!showMenu)
-  }
-
   return (
-    <Flex height="100vh" width={180}>
+    <Flex height="100vh">
       <Sidebar>
-        <Flex maxWidth={180}>
+        <Flex>
           <Menu>
-            <MenuHeader onClick={ toggleModal } children="SiaKit"/>
-            <MenuItem icon={<BsHouseDoor/>} value="1" onClick={ toggleModal }>
+            <MenuHeader onClick={ () => console.log("clicou") } children="SiaKit"/>
+            <MenuItem icon={<BsHouseDoor/>} value="1" onClick={ () => console.log("clicou") }>
               Manutenção
             </MenuItem>
-            <MenuItem icon={<BsBuilding/>} value="2" onClick={ toggleModal }>
+            <MenuItem icon={<BsBuilding/>} value="2" onClick={ () => console.log("clicou") }>
               Clientes
             </MenuItem>
-            <MenuItem icon={<BsPerson/>} value="3" onClick={ toggleModal }>
+            <MenuItem icon={<BsPerson/>} value="3" onClick={ () => console.log("clicou") }>
               Perfil
             </MenuItem>
           </Menu>
@@ -53,7 +43,7 @@ export function Header(){
           </SubMenuTitle>
           <SubMenuSeparator />
           <Link to="/maintenance" style={{ textDecoration: "none"}}>
-            <SubMenuItem children='Dashboard' onClick={ toggleModal }/>
+            <SubMenuItem children='Dashboard' onClick={ () => console.log("clicou") }/>
           </Link>
         </SubMenu>
 
@@ -63,7 +53,7 @@ export function Header(){
           </SubMenuTitle>
           <SubMenuSeparator />
           <Link to="/customers" style={{ textDecoration: "none"}}>
-            <SubMenuItem children="Cadastro de empresas" onClick={ toggleModal }/>
+            <SubMenuItem children="Cadastro de empresas" onClick={ () => console.log("clicou")}/>
           </Link>
         </SubMenu>
 
@@ -73,7 +63,7 @@ export function Header(){
           </SubMenuTitle>
           <SubMenuSeparator />
           <Link to="/profile" style={{ textDecoration: "none"}}>
-            <SubMenuItem children="Configurações" onClick={ toggleModal }/>
+            <SubMenuItem children="Configurações" onClick={ () => console.log("clicou") }/>
           </Link>
         </SubMenu>
       </Sidebar>
