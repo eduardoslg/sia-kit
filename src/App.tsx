@@ -7,13 +7,10 @@ import Global from './styles/global';
 function App() {
 
   return (
-    <Grid columns={"12.5vw 87.5vw"}>
       <BrowserRouter>
         <Global />
-        <Header />
         <Router />
       </BrowserRouter>
-    </Grid>
   )
 }
 
